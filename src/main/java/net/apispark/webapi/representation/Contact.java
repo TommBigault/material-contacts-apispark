@@ -9,7 +9,11 @@ import java.util.Date;
 
 public class Contact implements Serializable {
 
-    private String id;
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String id;
     private String firstName;
     private String lastName;
     private String avatar;
@@ -17,16 +21,23 @@ public class Contact implements Serializable {
     private Boolean active;
     private Integer rank;
     private String companyId;
+    private String gender ;
 
     public Contact(){}
 
-    public Contact(String id, String firstName, String lastName, String avatar) {
+    public Contact(String id, String firstName, String lastName, String avatar ) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.avatar = avatar;
+        this.gender = "Homme";
     }
-
+    public String getGender(){
+    	return this.gender ;
+    }
+    public void setGender(String gender){
+    	this.gender = gender ;
+    }
     public String getId() {
         return id;
     }
