@@ -25,12 +25,12 @@ public class Contact implements Serializable {
 
     public Contact(){}
 
-    public Contact(String id, String firstName, String lastName, String avatar ) {
+    public Contact(String id, String firstName, String lastName, String avatar,String gender ) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.avatar = avatar;
-        this.gender = "Homme";
+        this.gender = gender;
     }
     public String getGender(){
     	return this.gender ;
