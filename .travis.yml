@@ -1,3 +1,13 @@
+web: java-jar target/material-contacts-apispark-1.0.0-SNAPSHOT.jar
+
 language: java
+script:
+- mvn package
+deploy :
+    provider : heroku
+    api_key: 9dc032c9-bc4f-4304-9a3a-59eee592137c
+    app:
+        master: material-contacts
+        staging: material-contacts-staging
 
 sudo: required
